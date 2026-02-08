@@ -15,7 +15,7 @@ export default function LandingPage() {
                 </div>
                 <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
                     <a href="#docs" style={{ color: '#9CA3AF', fontSize: '0.875rem' }}>Docs</a>
-                    <a href="https://github.com" target="_blank" style={{ color: '#9CA3AF', fontSize: '0.875rem' }}>GitHub</a>
+                    <a href="https://github.com/padhisiddharth/breakpoint" target="_blank" style={{ color: '#9CA3AF', fontSize: '0.875rem' }}>GitHub</a>
                     <Link href="/dashboard" className="btn" style={{ backgroundColor: '#1F2937', color: '#fff', border: '1px solid #374151' }}>
                         Sign In
                     </Link>
@@ -308,10 +308,10 @@ export default function LandingPage() {
                                 <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', margin: 0 }}>MCP Integration (Model Context Protocol)</h3>
                             </div>
                             <p style={{ color: '#9CA3AF', marginBottom: '1rem', fontSize: '0.9rem' }}>
-                                Connect AI coding assistants like Cursor, Windsurf, and others directly to our hosted MCP server. 
+                                Connect AI coding assistants like Cursor, Windsurf, and others directly to our hosted MCP server.
                                 All test execution happens on our infrastructure — no local setup required.
                             </p>
-                            
+
                             <div style={{ background: 'rgba(6, 182, 212, 0.1)', border: '1px solid rgba(6, 182, 212, 0.3)', borderRadius: '0.5rem', padding: '1rem', marginBottom: '1.5rem' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#06B6D4', fontWeight: 'bold', marginBottom: '0.5rem' }}>
                                     <Server size={16} /> GitHub-Connected Architecture
@@ -330,7 +330,7 @@ export default function LandingPage() {
 
                             <h4 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.75rem', color: '#D1D5DB' }}>Step 2: Configure MCP Client</h4>
                             <p style={{ color: '#6B7280', marginBottom: '0.75rem', fontSize: '0.85rem' }}>
-                                Add to your MCP settings (e.g., ~/.cursor/mcp.json). <br/>
+                                Add to your MCP settings (e.g., ~/.cursor/mcp.json). <br />
                                 <span style={{ color: '#F59E0B' }}>Note:</span> Replace URL with your deployed server address or localhost.
                             </p>
                             <div style={{ background: '#0D1117', padding: '1rem', borderRadius: '0.5rem', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.8rem', border: '1px solid #30363D', marginBottom: '1.5rem', overflow: 'auto' }}>
@@ -375,7 +375,7 @@ export default function LandingPage() {
                                     <span style={{ color: '#9CA3AF', fontSize: '0.85rem' }}>Fetch test reports by project/run ID</span>
                                 </div>
                             </div>
-                            
+
                             <div style={{ marginTop: '1.5rem', padding: '1rem', background: '#0D1117', borderRadius: '0.5rem', border: '1px solid #30363D' }}>
                                 <h5 style={{ fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#D1D5DB' }}>How it works (no code upload!):</h5>
                                 <ol style={{ margin: 0, paddingLeft: '1.25rem', color: '#9CA3AF', fontSize: '0.85rem', lineHeight: '1.8' }}>
@@ -417,7 +417,7 @@ export default function LandingPage() {
             {/* 9. Footer */}
             <footer style={{ padding: '3rem 2rem', background: '#000', borderTop: '1px solid #1F2937', textAlign: 'center', color: '#6B7280', fontSize: '0.875rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '1.5rem' }}>
-                    <a href="#" style={{ color: '#9CA3AF' }}>GitHub</a>
+                    <a href="https://github.com/padhisiddharth/breakpoint" style={{ color: '#9CA3AF' }}>GitHub</a>
                     <a href="#" style={{ color: '#9CA3AF' }}>Docs</a>
                     <a href="#" style={{ color: '#9CA3AF' }}>Devpost</a>
                 </div>

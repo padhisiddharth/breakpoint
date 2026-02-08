@@ -2,6 +2,9 @@
 
 A terminal-first AI-powered testing tool that automatically scans backend codebases, generates edge-case and load tests, executes them, and explains failures.
 
+> [!NOTE]
+> **Current Support:** Breakpoint currently supports **Node.js** projects (Express, Fastify, NestJS, etc.). Support for Python (FastAPI/Flask), Go, and other languages is coming soon.
+
 ## Installation
 
 ### 1. Install CLI
@@ -60,8 +63,9 @@ Once installed and the server is running, you can run the `breakpoint` command f
   breakpoint report
   ```
 
-- **Help**:
-  Show all available commands and options.
-  ```bash
   breakpoint --help
   ```
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) to get started with setting up the development environment and submitting pull requests.
