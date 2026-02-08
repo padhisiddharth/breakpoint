@@ -213,6 +213,75 @@ program
     });
 
 program
+    .command('scan')
+    .description('Scan codebase and generate analysis report')
+    .option('-p, --path <path>', 'Path to codebase', '.')
+    .option('-f, --frontend', 'Scan as frontend project (React/Next.js/Vue)')
+    .option('-o, --output <file>', 'Output report to file')
+    .action(async (options) => {
+        try {
+            if (options.frontend) {
+                const { FrontendScanner } = await import('./frontend_scanner/index.js');
+                const scanner = new FrontendScanner(options.path);
+                const result = await scanner.scan();
+
+                console.log(chalk.bold('\n📊 Frontend Scan Results\n'));
+
+                // Framework
+                console.log(chalk.cyan('Framework:'), result.framework);
+
+                // Pages
+                console.log(chalk.cyan(`\nPages/Routes (${result.pages.length}):`));
+                result.pages.forEach(p => {
+                    const dynamic = p.isDynamic ? chalk.yellow(' [dynamic]') : '';
+                    console.log(`  ${chalk.green(p.route)}${dynamic}`);
+                });
+
+                // API Dependencies
+                console.log(chalk.cyan(`\nAPI Dependencies (${result.apiDependencies.length}):`));
+                result.apiDependencies.forEach(api => {
+                    console.log(`  ${chalk.bold(api.method)} ${api.apiEndpoint}`);
+                    console.log(chalk.dim(`    → ${api.componentFile}:${api.lineNumber}`));
+                });
+
+                // Interactive Components
+                console.log(chalk.cyan(`\nInteractive Components (${result.interactiveComponents.length}):`));
+                result.interactiveComponents.forEach(comp => {
+                    console.log(`  ${chalk.bold(comp.componentName)}: ${comp.features.join(', ')}`);
+                });
+
+                // Output to file if requested
+                if (options.output) {
+                    const fs = await import('fs/promises');
+                    await fs.writeFile(options.output, JSON.stringify(result, null, 2));
+                    console.log(chalk.green(`\n✅ Report saved to ${options.output}`));
+                }
+            } else {
+                // Backend scan (existing behavior)
+                const { CodebaseScanner } = await import('./scanner/index.js');
+                const scanner = new CodebaseScanner(options.path);
+                const endpoints = scanner.scan();
+
+                console.log(chalk.bold('\n📊 Backend Scan Results\n'));
+                console.log(chalk.cyan(`Found ${endpoints.length} endpoints:`));
+                endpoints.forEach(ep => {
+                    console.log(`  ${chalk.bold(ep.method)} ${ep.path}`);
+                    console.log(chalk.dim(`    → ${ep.sourceFile}:${ep.lineStart}`));
+                });
+
+                if (options.output) {
+                    const fs = await import('fs/promises');
+                    await fs.writeFile(options.output, JSON.stringify(endpoints, null, 2));
+                    console.log(chalk.green(`\n✅ Report saved to ${options.output}`));
+                }
+            }
+        } catch (err: any) {
+            console.error(chalk.red('Scan Error:'), err.message);
+            process.exit(1);
+        }
+    });
+
+program
     .command('mcp')
     .description('Start the MCP server')
     .action(async () => {
