@@ -15,7 +15,7 @@ npm install -g breakpoint-tester
 The CLI requires a running **Breakpoint Server** to store projects and reports.
 To run the server locally:
 
-1.  Clone the main repository: [github.com/your-username/breakpoint](https://github.com/your-username/breakpoint)
+1.  Clone the main repository: [github.com/padhisiddharth/breakpoint](https://github.com/padhisiddharth/breakpoint)
 2.  Start the server:
     ```bash
     cd breakpoint
@@ -53,7 +53,7 @@ breakpoint report
 ```
 
 ## 📚 Documentation
-For full documentation, architecture details, and contribution guide, visit the [Main Repository](https://github.com/your-username/breakpoint).
+For full documentation, architecture details, and contribution guide, visit the [Main Repository](https://github.com/padhisiddharth/breakpoint).
 
 ## 📄 License
 **Polyform Noncommercial License 1.0.0**
