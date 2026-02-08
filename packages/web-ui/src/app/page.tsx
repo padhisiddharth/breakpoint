@@ -33,12 +33,12 @@ export default function LandingPage() {
                 </p>
 
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginBottom: '4rem' }}>
-                    <Link href="/settings" className="btn" style={{ backgroundColor: '#38BDF8', color: '#000', fontWeight: 'bold', padding: '0.75rem 2rem', fontSize: '1rem' }}>
-                        Get API Key
-                    </Link>
-                    <Link href="/dashboard" className="btn" style={{ backgroundColor: 'transparent', color: '#fff', border: '1px solid #374151', padding: '0.75rem 2rem', fontSize: '1rem' }}>
-                        View Demo
-                    </Link>
+                    <a href="https://github.com/padhisiddharth/breakpoint" target="_blank" className="btn" style={{ backgroundColor: '#38BDF8', color: '#000', fontWeight: 'bold', padding: '0.75rem 2rem', fontSize: '1rem' }}>
+                        Get Started
+                    </a>
+                    <a href="https://github.com/padhisiddharth/breakpoint" target="_blank" className="btn" style={{ backgroundColor: 'transparent', color: '#fff', border: '1px solid #374151', padding: '0.75rem 2rem', fontSize: '1rem' }}>
+                        View on GitHub
+                    </a>
                 </div>
 
                 {/* Hero Visual - Split Screen */}
@@ -405,12 +405,9 @@ export default function LandingPage() {
                 <p style={{ color: '#9CA3AF', marginBottom: '3rem', fontSize: '1.25rem' }}>No setup. No config. Runs in your repo.</p>
 
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-                    <Link href="/settings" className="btn" style={{ backgroundColor: '#38BDF8', color: '#000', fontWeight: 'bold', padding: '1rem 3rem', fontSize: '1.125rem', borderRadius: '9999px' }}>
-                        Generate API Key
-                    </Link>
-                    <Link href="/dashboard" className="btn" style={{ marginTop: '1rem', background: 'transparent', color: '#9CA3AF', textDecoration: 'underline' }}>
-                        View Demo Report
-                    </Link>
+                    <a href="https://github.com/padhisiddharth/breakpoint" target="_blank" className="btn" style={{ backgroundColor: '#38BDF8', color: '#000', fontWeight: 'bold', padding: '1rem 3rem', fontSize: '1.125rem', borderRadius: '9999px' }}>
+                        Get Started on GitHub
+                    </a>
                 </div>
             </section>
 
