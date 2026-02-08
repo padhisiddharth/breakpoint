@@ -106,7 +106,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
                 load: runLoad,
                 deepCheck: deepCheck,
                 target: target,
-                ...(process.env.AITEST_PROJECT_ID ? { projectId: process.env.AITEST_PROJECT_ID } : {})
+                ...(process.env.BREAKPOINT_PROJECT_ID ? { projectId: process.env.BREAKPOINT_PROJECT_ID } : {})
             });
 
             lastReportPath = result.reportPath;

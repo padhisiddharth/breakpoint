@@ -10,10 +10,10 @@ dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
 const DB_PATH = path.resolve(__dirname, '../aitest.db');
 const db = new sqlite3.Database(DB_PATH);
 
-const apiKey = process.env.AITEST_API_KEY;
+const apiKey = process.env.BREAKPOINT_API_KEY;
 
 if (!apiKey) {
-    console.error('AITEST_API_KEY not found in root .env');
+    console.error('BREAKPOINT_API_KEY not found in root .env');
     process.exit(1);
 }
 

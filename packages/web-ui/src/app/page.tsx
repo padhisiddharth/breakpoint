@@ -286,9 +286,9 @@ export default function LandingPage() {
                                 <div style={{ color: '#9CA3AF' }}># Add to your GitHub Actions workflow</div>
                                 <pre style={{ margin: '0.5rem 0 0 0', color: '#E5E7EB' }}>{`- name: Run AI Test Engineer
   run: |
-    npx ai-test-engineer run
+    npx breakpoint-tester run
   env:
-    AITEST_API_KEY: \${{ secrets.AITEST_API_KEY }}
+    BREAKPOINT_API_KEY: \${{ secrets.BREAKPOINT_API_KEY }}
     GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}`}</pre>
                             </div>
 

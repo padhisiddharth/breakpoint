@@ -99,18 +99,18 @@ export async function runTestPipeline(options: PipelineOptions): Promise<Pipelin
         await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 
         // 6. Upload Report
-        if (process.env.AITEST_API_KEY && options.projectId) {
+        if (process.env.BREAKPOINT_API_KEY && options.projectId) {
             console.log(chalk.blue(`\n📤 Uploading report to server for project: ${options.projectId}...`));
             try {
                 // Determine server URL (default to localhost for now, or env var)
-                const serverUrl = process.env.AITEST_SERVER_URL || 'http://localhost:4000';
+                const serverUrl = process.env.BREAKPOINT_SERVER_URL || 'http://localhost:4000';
 
                 // Use global fetch (Node 18+)
                 const res = await fetch(`${serverUrl}/api/reports`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${process.env.AITEST_API_KEY}`,
+                        'Authorization': `Bearer ${process.env.BREAKPOINT_API_KEY}`,
                         'X-Project-Id': options.projectId
                     },
                     body: JSON.stringify(report)
@@ -128,7 +128,7 @@ export async function runTestPipeline(options: PipelineOptions): Promise<Pipelin
                 console.error(chalk.red(`Error uploading report: ${e.message}`));
             }
         } else {
-            console.log(chalk.yellow('\n⚠️  Skipping report upload: Missing AITEST_API_KEY or projectId.'));
+            console.log(chalk.yellow('\n⚠️  Skipping report upload: Missing BREAKPOINT_API_KEY or projectId.'));
         }
 
         // 7. Load Test

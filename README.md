@@ -63,6 +63,9 @@ Once installed and the server is running, you can run the `breakpoint` command f
   breakpoint report
   ```
 
+- **GitHub Actions Integration**:
+  Automate testing in your CI/CD pipeline. See our [GitHub Actions Guide](docs/GITHUB_ACTIONS.md).
+
   breakpoint --help
   ```
 
