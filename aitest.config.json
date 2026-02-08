@@ -1,0 +1,13 @@
+{
+  "projectType": "express",
+  "testDir": "./tests",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "projectId": "project-1"
+}

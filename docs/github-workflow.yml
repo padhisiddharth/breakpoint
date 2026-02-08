@@ -1,0 +1,47 @@
+
+name: AI Test Engineer
+
+on:
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  test-and-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Project
+        run: npm run build --if-present
+
+      - name: Start Server (Example)
+        # REPLACE THIS with your actual start command, ensuring it runs in background
+        run: title="Run Server" nohup npm start & sleep 5
+        env:
+          PORT: 3000
+
+      - name: Run AI Tests
+        continue-on-error: true # Allow failures so we can report them
+        run: npx aitest run --load
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Post AI Report
+        if: always()
+        run: npx aitest ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}

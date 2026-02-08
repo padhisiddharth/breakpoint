@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Environment
+.env
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Testing
+coverage/
+aitest-report.json
+tests/generated/*.test.ts # Assuming we want to ignore generated tests? 
+# Only the template tests or handwritten ones should be kept? 
+# actually 'tests/' contains generated tests by default with 'aitest run'.
+# If the user wants to keep them, Remove the line above.
+# The user asked to ignore "ai generated md files".
+brain/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# AI Generated Artifacts
+*.generated.md
+docs/autogen/
