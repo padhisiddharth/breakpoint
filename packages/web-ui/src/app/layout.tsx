@@ -7,7 +7,7 @@ import AppShell from '../components/AppShell';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'AI Test Engineer Dashboard',
+  title: 'Breakpoint Dashboard',
   description: 'Centralized Test Intelligence',
 };
 

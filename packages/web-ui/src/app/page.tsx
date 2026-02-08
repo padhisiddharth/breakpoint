@@ -11,7 +11,7 @@ export default function LandingPage() {
             {/* Navigation (Minimal) */}
             <nav style={{ padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontWeight: 'bold', fontSize: '1.125rem', color: '#fff' }}>
-                    <BarChart2 color="#38BDF8" /> AI Test Engineer
+                    <BarChart2 color="#38BDF8" /> Breakpoint
                 </div>
                 <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
                     <a href="#docs" style={{ color: '#9CA3AF', fontSize: '0.875rem' }}>Docs</a>
@@ -50,7 +50,7 @@ export default function LandingPage() {
                             <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#F59E0B' }}></div>
                             <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10B981' }}></div>
                         </div>
-                        <div style={{ color: '#9CA3AF' }}>$ aitest run</div>
+                        <div style={{ color: '#9CA3AF' }}>$ breakpoint run</div>
                         <div style={{ color: '#38BDF8', marginTop: '0.5rem' }}>✔ Scanning repository...</div>
                         <div style={{ color: '#38BDF8' }}>✔ Generating edge cases...</div>
                         <div style={{ color: '#EF4444', marginTop: '0.5rem' }}>✖ Load test failed</div>
@@ -110,7 +110,7 @@ export default function LandingPage() {
             <section style={{ padding: '6rem 2rem', borderBottom: '1px solid #1F2937' }}>
                 <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>An AI Test Engineer — built for the terminal</h2>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Breakpoint — built for the terminal</h2>
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
@@ -120,7 +120,7 @@ export default function LandingPage() {
                             <div>
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Run in your repo</h3>
                                 <div style={{ background: '#000', padding: '1rem', borderRadius: '6px', fontFamily: 'monospace', marginTop: '0.5rem', border: '1px solid #374151' }}>
-                                    <span style={{ color: '#38BDF8' }}>$</span> aitest run
+                                    <span style={{ color: '#38BDF8' }}>$</span> breakpoint run
                                 </div>
                             </div>
                         </div>
@@ -211,10 +211,10 @@ export default function LandingPage() {
                             </div>
                             <div style={{ background: '#0D1117', padding: '1rem', borderRadius: '0.5rem', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.875rem', border: '1px solid #30363D' }}>
                                 <div><span style={{ color: '#9CA3AF' }}>$</span> <span style={{ color: '#38BDF8' }}>cd your-backend-project</span></div>
-                                <div><span style={{ color: '#9CA3AF' }}>$</span> <span style={{ color: '#38BDF8' }}>aitest init</span></div>
+                                <div><span style={{ color: '#9CA3AF' }}>$</span> <span style={{ color: '#38BDF8' }}>breakpoint init</span></div>
                                 <div style={{ marginTop: '0.5rem', color: '#6EE7B7' }}>✔ Enter your API Key: ****</div>
                                 <div style={{ color: '#6EE7B7' }}>✔ Enter Project ID: checkout-service</div>
-                                <div style={{ color: '#6EE7B7' }}>✔ Created aitest.config.json</div>
+                                <div style={{ color: '#6EE7B7' }}>✔ Created breakpoint.config.json</div>
                             </div>
                         </div>
 
@@ -225,7 +225,7 @@ export default function LandingPage() {
                                 <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', margin: 0 }}>Run tests</h3>
                             </div>
                             <div style={{ background: '#0D1117', padding: '1rem', borderRadius: '0.5rem', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.875rem', border: '1px solid #30363D' }}>
-                                <div><span style={{ color: '#9CA3AF' }}>$</span> <span style={{ color: '#38BDF8' }}>aitest run</span></div>
+                                <div><span style={{ color: '#9CA3AF' }}>$</span> <span style={{ color: '#38BDF8' }}>breakpoint run</span></div>
                                 <div style={{ marginTop: '0.5rem', color: '#9CA3AF' }}>Scanning codebase...</div>
                                 <div style={{ color: '#9CA3AF' }}>Found 12 endpoints</div>
                                 <div style={{ color: '#9CA3AF' }}>Generating edge case tests...</div>
@@ -238,19 +238,19 @@ export default function LandingPage() {
                             <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '1.5rem' }}>CLI Commands Reference</h3>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
                                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                    <code style={{ background: '#0D1117', padding: '0.25rem 0.5rem', borderRadius: '4px', color: '#38BDF8', fontSize: '0.875rem' }}>aitest init</code>
+                                    <code style={{ background: '#0D1117', padding: '0.25rem 0.5rem', borderRadius: '4px', color: '#38BDF8', fontSize: '0.875rem' }}>breakpoint init</code>
                                     <span style={{ color: '#9CA3AF', fontSize: '0.875rem' }}>Initialize project with API key & config</span>
                                 </div>
                                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                    <code style={{ background: '#0D1117', padding: '0.25rem 0.5rem', borderRadius: '4px', color: '#38BDF8', fontSize: '0.875rem' }}>aitest run</code>
+                                    <code style={{ background: '#0D1117', padding: '0.25rem 0.5rem', borderRadius: '4px', color: '#38BDF8', fontSize: '0.875rem' }}>breakpoint run</code>
                                     <span style={{ color: '#9CA3AF', fontSize: '0.875rem' }}>Scan, generate, and execute tests</span>
                                 </div>
                                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                    <code style={{ background: '#0D1117', padding: '0.25rem 0.5rem', borderRadius: '4px', color: '#38BDF8', fontSize: '0.875rem' }}>aitest run --load</code>
+                                    <code style={{ background: '#0D1117', padding: '0.25rem 0.5rem', borderRadius: '4px', color: '#38BDF8', fontSize: '0.875rem' }}>breakpoint run --load</code>
                                     <span style={{ color: '#9CA3AF', fontSize: '0.875rem' }}>Include load/traffic tests</span>
                                 </div>
                                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                    <code style={{ background: '#0D1117', padding: '0.25rem 0.5rem', borderRadius: '4px', color: '#38BDF8', fontSize: '0.875rem' }}>aitest server</code>
+                                    <code style={{ background: '#0D1117', padding: '0.25rem 0.5rem', borderRadius: '4px', color: '#38BDF8', fontSize: '0.875rem' }}>breakpoint server</code>
                                     <span style={{ color: '#9CA3AF', fontSize: '0.875rem' }}>Start local dashboard server</span>
                                 </div>
                             </div>
@@ -259,7 +259,7 @@ export default function LandingPage() {
                         {/* Config File Example */}
                         <div style={{ background: '#161B22', border: '1px solid #30363D', borderRadius: '0.75rem', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '1rem' }}>Configuration File</h3>
-                            <p style={{ color: '#9CA3AF', marginBottom: '1rem', fontSize: '0.9rem' }}>aitest.config.json — customize scanner behavior</p>
+                            <p style={{ color: '#9CA3AF', marginBottom: '1rem', fontSize: '0.9rem' }}>breakpoint.config.json — customize scanner behavior</p>
                             <div style={{ background: '#0D1117', padding: '1rem', borderRadius: '0.5rem', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.8rem', border: '1px solid #30363D', overflow: 'auto' }}>
                                 <pre style={{ margin: 0, color: '#E5E7EB' }}>{`{
   "projectType": "express",
@@ -284,7 +284,7 @@ export default function LandingPage() {
                             <h4 style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.75rem', color: '#D1D5DB' }}>Setup</h4>
                             <div style={{ background: '#0D1117', padding: '1rem', borderRadius: '0.5rem', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.8rem', border: '1px solid #30363D', marginBottom: '1.5rem' }}>
                                 <div style={{ color: '#9CA3AF' }}># Add to your GitHub Actions workflow</div>
-                                <pre style={{ margin: '0.5rem 0 0 0', color: '#E5E7EB' }}>{`- name: Run AI Test Engineer
+                                <pre style={{ margin: '0.5rem 0 0 0', color: '#E5E7EB' }}>{`- name: Run Breakpoint
   run: |
     npx breakpoint-tester run
   env:

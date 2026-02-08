@@ -75,7 +75,7 @@ export default function Projects() {
                             Get started by running the CLI in your project directory.
                         </p>
                         <code style={{ background: '#000', padding: '0.5rem 1rem', borderRadius: '0.375rem', color: 'var(--accent-primary)' }}>
-                            aitest init
+                            breakpoint init
                         </code>
                     </div>
                 )}

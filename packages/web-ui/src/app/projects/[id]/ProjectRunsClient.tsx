@@ -170,7 +170,7 @@ export default function ProjectRunsClient() {
                                 {runs.length === 0 && (
                                     <tr>
                                         <td colSpan={5} style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '3rem' }}>
-                                            No runs found. Run <code className="text-mono" style={{ color: 'var(--accent-primary)' }}>aitest run</code> to generate data.
+                                            No runs found. Run <code className="text-mono" style={{ color: 'var(--accent-primary)' }}>breakpoint run</code> to generate data.
                                         </td>
                                     </tr>
                                 )}
